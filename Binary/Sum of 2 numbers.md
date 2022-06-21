@@ -1,12 +1,13 @@
 [Leetcode Example Sum of 2 numbers without using + operator ](https://leetcode.com/problems/sum-of-two-integers/)
 
+In order to do sum of 2 numbers without arithmetic operator or build in functions we need to leverage bit operations. 
 
 Let's take 2 examples 1 and 3. Converting them in binary we get:  
 
 `1 = "01"`
 `3 = "11"`
 
-In order to do sum of 2 numbers without arithmetic operator or build in functions we need to leverage bit operations. 
+
 There are 3 bit operations. 
 
 Operation: AND -> a) 1 & 1 => 1  b) 1 & 0 => 0 c) 0^0 => 0
