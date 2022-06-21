@@ -1,6 +1,6 @@
 [Leetcode Example Sum of 2 numbers without using + operator ](https://leetcode.com/problems/sum-of-two-integers/)
 
-In order to do sum of 2 numbers without arithmetic operator or build in functions we need to leverage bit operations. 
+## In order to do sum of 2 numbers without arithmetic operator or build in functions we need to leverage bit operations. 
 
 Let's take 2 examples 1 and 3. Converting them in binary we get:  
 
