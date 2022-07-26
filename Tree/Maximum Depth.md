@@ -27,7 +27,7 @@ The number of nodes in the tree is in the range [0, 104].
 ```
 
 
-# Solution
+# Solution 1 Recursive 
 
 ```python
 class Solution:
@@ -42,4 +42,29 @@ class Solution:
 #             We recurse and add 1 for each level. We only return the maximum branch for each recursion
             return max(left,right) + 1
 
+```
+
+# Solution 2 Iteration 
+
+```python
+
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if root == None:
+            return 0
+        stack = []
+#         we build a BFS , add level and node pointer on each
+        stack.append((0,root))
+
+        maxDepth = 0
+        while stack != []:
+#  We iterate over our stack of nodes, pop them off, and add is children back into the stack with a +1 for depth. 
+# We stop only after vising all children
+            depth,node = stack.pop()
+            maxDepth = max(depth,maxDepth)
+            if node != None:
+                stack.append((depth+1,node.left))
+                stack.append((depth+1,node.right))
+        
+        return maxDepth
 ```
