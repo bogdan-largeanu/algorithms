@@ -33,7 +33,7 @@ The number of nodes in both trees is in the range [0, 100].
 # Solution
 
 We iterate over and return false when we spot something wrong. If not we end with True from None == None. 
-```
+```python
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
