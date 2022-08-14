@@ -61,3 +61,13 @@ class Solution:
             
 
 ```
+
+Complexity 
+
+        Time complexity : O(n Log N)
+
+        Other than the sort invocation, we do a simple linear scan of the list, so the runtime is dominated by the O(N Log N) complexity of sorting.
+
+        Space complexity : O(log⁡N) or O(n)
+
+        If we can sort intervals in place, we do not need more than constant additional space, although the sorting itself takes O(log N) space. Otherwise, we must allocate linear space to store a copy of intervals and sort that.
