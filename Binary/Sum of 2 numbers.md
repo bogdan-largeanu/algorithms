@@ -79,7 +79,7 @@ return a // 100 which is 4 in base 10(normal numbers)
 
 
 If you want to test the code here's a python version 
-```python3
+```python
 
 def Bitwise_add(a,b):
     
