@@ -1,0 +1,76 @@
+## Problem
+link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+```
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+ 
+
+Example 1:
+
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+
+Example 2:
+
+Input: head = [1], n = 1
+Output: []
+
+Example 3:
+
+Input: head = [1,2], n = 1
+Output: [1]
+
+ 
+
+Constraints:
+
+    The number of nodes in the list is sz.
+    1 <= sz <= 30
+    0 <= Node.val <= 100
+    1 <= n <= sz
+
+ 
+
+Follow up: Could you do this in one pass?
+
+```
+
+
+## Solution
+Solution. Since we know we want to eliminate N from end. We make 2 pointers with a distance of N  
+
+The main trick is dealing with the edge case where n land on the first element. We create a empty node and count in front of node. So we handle all edge cases this way
+
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+. 
+        if not head.next:
+            return None
+        emptyHeadPointer = ListNode(None,head)
+        start = emptyHeadPointer
+        endPointer = head
+        
+#         move the pointer my value of n
+        while n >0 and endPointer:
+            endPointer = endPointer.next
+            n -= 1
+            
+#       move until endPointer reaches the end
+        while endPointer:
+            endPointer = endPointer.next
+            emptyHeadPointer = emptyHeadPointer.next
+            
+#       emptyHeadPointer.next represent now our target number to remove. so we point our next to next.next 
+        print(emptyHeadPointer.val)
+        emptyHeadPointer.next = emptyHeadPointer.next.next
+        
+        return start.next
+        
+```
