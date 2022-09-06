@@ -63,10 +63,7 @@ class Solution:
 #            else there's overlap, we compare to known which pointer we hold. We eliminate the one extending more (meaning with a higher END) as that minimisez the number of periods we need to eliminate to avoid overlaping 
             else:
                 skipCount +=1
-                if  lastEnd < currEnd:
-                    continue
-                else:
-                    lastEnd = currEnd
+                lastEnd = min(lastEnd,currEnd)
                     
         
         return skipCount
