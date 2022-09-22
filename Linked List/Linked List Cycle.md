@@ -77,6 +77,10 @@ class Solution:
 ```
 ### Solution 2 tortoise and hare 
 
+#         We will have a fast and slow pointer. Fast pointer goes 2 nodes at a time
+#       Think of the while loop as a recursive function that requires a good base case
+
+
 
 ```python
 # Definition for singly-linked list.
@@ -89,8 +93,6 @@ class Solution:
     
     def hareTortoiseSolution(self,head):
         hare,tortoise = head, head
-#         We will have a fast and slow pointer. Fast pointer goes 2 nodes at a time
-#       Think of the while loop as a recursive function that requires a good base case
 
         while hare and hare.next:
             hare = hare.next.next
