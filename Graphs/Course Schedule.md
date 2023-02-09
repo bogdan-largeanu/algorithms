@@ -45,7 +45,7 @@ All the pairs prerequisites[i] are unique.
 
 ## Solution
 
-Summary:
+Summary: The gist of it is we represent the course dependency as a graph, and then perform a DFS to find if we visited a node twice. If we do it means we have 2 overlapping requirements, if we finish DFS the course then all is good.
 
 ```python
 class Solution:
