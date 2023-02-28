@@ -35,6 +35,10 @@ Follow up: A linked list can be reversed either iteratively or recursively. Coul
 ```
 
 ## Solution
+
+Summary:  Imagine a bridge , we flip it from right to left ( None   a ---> b ---->)  (None <---- a <---- b)  
+We keep track of past pointer. We point current next to pass, (storing next first), then continue to next one
+
 Iterative Solution
 ```python
 # Definition for singly-linked list.
