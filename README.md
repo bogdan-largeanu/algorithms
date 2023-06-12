@@ -1,7 +1,13 @@
 # Algorithms with explained solutions 
 
-Notes
-## Linked List
+## Knowledge Notes
+
+### Python
+
+Removing an element from the front of a list(or any part except last) in python is O(N) because it requires to shift all other element
+
+
+### Linked List
 
 q: Why use linked list instead of array list? 
 a: Imagine a if you have [a,b,c,d] in both structures. If you need to add an value "x" where b is, in array you need to shift all elements(assuming you have the space to the right) and then insert x. Linked list you traverse the list and point b node to x then x to c. Without carrying how many more elements are after.  
@@ -9,6 +15,23 @@ Resulting in O(1) time for linked list, while array will be O(n)
 
 ## Code Cheatsheet 
 
+### Deque
+
+Basic Use  
+
+```python
+from collections import deque
+
+q = deque([])
+
+q.append(1)
+q.appendLeft(1)
+
+q.pop()
+q.popleft()
+
+len(q)
+```
 
 ### Heaps
 
