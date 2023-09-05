@@ -1,7 +1,49 @@
 # Cheatsheet 
 
 
-## Heaps
+### Python
+
+
+
+
+### Linked List
+
+q: Why use linked list instead of array list? 
+a: Imagine a if you have [a,b,c,d] in both structures. If you need to add an value "x" where b is, in array you need to shift all elements(assuming you have the space to the right) and then insert x. Linked list you traverse the list and point b node to x then x to c. Without carrying how many more elements are after.  
+Resulting in O(1) time for linked list, while array will be O(n)
+
+## Code Cheatsheet 
+
+### Why avoid using list 
+
+Removing an element from the front of a list(or any part except last) in python is O(N) because it requires to shift all other element. The solution for o(1) add and remove from both ends of a list is to use deque (double ended queue)
+
+### BFS and DFS 
+BFS should always use an iterative approach.
+DFS can use either recursive or iterative approach.
+
+BFS is painful to implement recursive while DFS is more natural to implement recursive.
+
+
+### Deque
+
+Basic Use  
+
+```python
+from collections import deque
+
+q = deque([])
+
+q.append(1)
+q.appendLeft(1)
+
+q.pop()
+q.popleft()
+
+len(q)
+```
+
+### Heaps
 
 By default, when we refer to heap, most implementations are min-heaps. This means the first element is always the smallest element.
 
@@ -40,5 +82,3 @@ max_element_from_heap = -1 * heappop(heap)
 #heap = [-7], -10 is removed
 #max_element_from_heap = 10, we have retrieved the largest element from the heap
 ```
-
-
